@@ -1,0 +1,52 @@
+\documentclass[10pt, a4paper]{awesome-cv}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\usepackage{multicol}
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{tikz}
+\newcommand{\myname}{\textbf{Marcia Baratto}}
+\newcommand{\mystar}{{\fontfamily{lmr}\selectfont$\star$}}
+
+
+\hypersetup{%
+  colorlinks=false,% hyperlinks will be black
+  linkbordercolor=red,% hyperlink borders will be red
+  pdfborderstyle={/S/U/W 1}% border style will be underline of width 1pt
+}
+
+% available options: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-nephritis}
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\name{Marcia}{Baratto}
+\position{[Doutora em Ciência Política]}
+\mobile{+49 151 6631-3342}
+\email{marciabt@gmail.com}
+\skype{marciabaratto}
+\linkedin{marciabaratto}
+\homepage{http://lattes.cnpq.br/7075304297900047}
+
+\begin{document}
+\makecvheader
+ \begin{picture}(0,0)
+     \put(445,28){\frame{\includegraphics[width=7em]{resume_pt-BR/cv.jpg}}}
+ \end{picture}
+
+\makecvfooter
+  {\today}
+  {\myname~~~·~~~\href{https://www.linkedin.com/in/marciabaratto}{Sobre Mim}}
+  {\thepage}
+
+ \input{resume_pt-BR/1.resumo.tex}
+ \input{resume_pt-BR/2.titulacao.tex}
+ \input{resume_pt-BR/3.atuacao.tex}
+ \input{resume_pt-BR/4.projetos.tex}
+ \input{resume_pt-BR/5.periodicos.tex}
+ \input{resume_pt-BR/6.atuacao.tex}
+ \input{resume_pt-BR/7.idiomas.tex}
+ \input{resume_pt-BR/8.producoes.tex}
+ \input{resume_pt-BR/9.bancas.tex}
+ \input{resume_pt-BR/10.eventos.tex}
+\end{document}
