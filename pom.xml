@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>br.com.mb</groupId>
+	<artifactId>cv-mb</artifactId>
+	<version>1.0</version>
+
+	<build>
+		<defaultGoal>clean latex:latex</defaultGoal>
+		<plugins>
+			<plugin>
+				<groupId>de.akquinet.maven</groupId>
+				<artifactId>maven-latex-plugin</artifactId>
+				<version>1.1</version>
+				<inherited>false</inherited>
+				<configuration>
+					<settings>
+						<texCommand>lualatex</texCommand>
+						<tempDirectory>m2latex</tempDirectory>
+						<cleanUp>false</cleanUp>
+					</settings>
+					</configuration>
+				</plugin>
+			</plugins>
+		</build>
+		<pluginRepositories>
+			<pluginRepository>
+				<id>maven-latex-plugin-repo</id>
+				<url>http://akquinet.github.com/maven-latex-plugin/maven2/</url>
+				<releases>
+					<enabled>true</enabled>
+				</releases>
+			</pluginRepository>
+		</pluginRepositories>
+	</project>
