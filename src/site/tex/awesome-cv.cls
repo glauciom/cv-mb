@@ -222,6 +222,7 @@
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
 \newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\newcommand*{\customsectionstyle}[1]{{\fontsize{13pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
 
@@ -505,6 +506,17 @@
   \phantomsection
   \color{gray}\vhrulefill{0.9pt}
 }
+
+% Define a section for CV
+% Usage: \cvsection{<section-title>}
+\newcommand{\cvcustomsection}[1]{%
+  \vspace{\acvSectionTopSkip}
+  \customsectionstyle{#1}
+  \phantomsection
+  \color{gray}\vhrulefill{0.9pt}
+}
+
+
 
 % Define a subsection for CV
 % Usage: \cvsubsection{<subsection-title>}
