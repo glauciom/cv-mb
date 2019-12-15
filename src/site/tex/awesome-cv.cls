@@ -597,10 +597,24 @@
 % Define a line of cv information(honor, award or something else)
 % Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
 \newcommand*{\cvhonor}[4]{%
-%  \honordatestyle{\vspace{5mm}#4~~~} &  \begin{justify} \honorpositionstyle{\vspace{-5mm}#1}, \honortitlestyle{#2} \end{justify} & \honorlocationstyle{\vspace{5mm}#3}\\
-  \honordatestyle{#4~~~} &  \honorpositionstyle{#1}, \honortitlestyle{#2} & \honorlocationstyle{#3}\\
+%  \honordatestyle{\vspace{9mm}#4~~~} &  \begin{justify} \honorpositionstyle{\vspace{-9mm}#1}, \honortitlestyle{#2} \end{justify} & \honorlocationstyle{\vspace{9mm}#3}\\
+  \honordatestyle{#4~~~} & \honorpositionstyle{#1}, \honortitlestyle{#2} & \honorlocationstyle{#3}\\
 
 }
+
+
+\newenvironment{cvcitems}{%
+\vspace{\acvSectionContentTopSkip}
+}
+
+% Define a line of cv information(honor, award or something else)
+% Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
+\newcommand*{\cvcitem}[2]{%
+%  \honordatestyle{\vspace{9mm}#4~~~} &  \begin{justify} \honorpositionstyle{\vspace{-9mm}#1}, \honortitlestyle{#2} \end{justify} & \honorlocationstyle{\vspace{9mm}#3}\\
+\vspace{-0.5mm}
+  \justify •~\honortitlestyle{\textbf{#1}}, \honortitlestyle{#2}
+}
+
 
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
